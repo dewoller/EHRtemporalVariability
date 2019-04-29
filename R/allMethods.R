@@ -128,7 +128,7 @@ setMethod(f = "plotDataTemporalMap",
               p <- plotly::plot_ly(x=dates, y=support[startValue:endValue,1], z = t(as.data.frame(temporalMap[,startValue:endValue])),
                                    type = "heatmap", colorscale = colorScale, reversescale = TRUE) %>%
                   plotly::config(staticPlot = FALSE, displayModeBar = TRUE, workspace = TRUE, editable = FALSE,
-                                 sendData = FALSE, displaylogo = FALSE, collaborate = FALSE, 
+                                 sendData = FALSE, displaylogo = FALSE, 
                                  modeBarButtonsToRemove = list("sendDataToCloud","hoverCompareCartesian"))%>%
                   plotly::layout(xaxis = x, yaxis = y, title = ifelse(absolute, "Absolute frequencies data temporal heatmap", "Probability distribution data temporal heatmap" )) %>%
                   plotly::layout(margin = m)
@@ -189,7 +189,7 @@ setMethod(f="plotIGTProjection",
                   
                   p <- plotly::plot_ly() %>%
                       plotly::config(staticPlot = FALSE, displayModeBar = TRUE, workspace = TRUE, editable = FALSE,
-                                     sendData = FALSE, displaylogo = FALSE, collaborate = FALSE, 
+                                     sendData = FALSE, displaylogo = FALSE, 
                                      modeBarButtonsToRemove = list("sendDataToCloud","hoverCompareCartesian")) %>%
                       plotly::layout(showlegend = FALSE,
                                      xaxis = list(title = 'D1', scaleanchor = "x"),
@@ -237,7 +237,7 @@ setMethod(f="plotIGTProjection",
                   
                   p <- plotly::plot_ly() %>%
                       plotly::config(staticPlot = FALSE, displayModeBar = TRUE, workspace = TRUE, editable = FALSE,
-                                     sendData = FALSE, displaylogo = FALSE, collaborate = FALSE,
+                                     sendData = FALSE, displaylogo = FALSE,
                                      modeBarButtonsToRemove = list("sendDataToCloud","hoverCompareCartesian")) %>%
                       plotly::layout(showlegend = FALSE, scene = list(xaxis = list(title = 'D1', scaleanchor = "x"),
                                                                       yaxis = list(title = 'D2', scaleanchor = "x"),
